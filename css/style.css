@@ -23,14 +23,17 @@ body{
 .grid-container{
     max-width:2600px;
     margin:0 auto;
+}
+.grid-container-height{
     height:calc(100vh - (400px));
     box-sizing: border-box;
+    /* border:1px solid red; */
 }
-.grid-container h2{
+.grid-container h2, h1{
     text-align: center;
     padding-bottom:20px;
     border-bottom:1px solid var(--lightGray);
-    margin-bottom:30px;
+    margin-bottom:50px 0;
 }
 a{
     text-decoration:none;
@@ -61,7 +64,7 @@ header nav a{
 }
 .logo-container{
     display: grid;
-    grid-template-columns:var(--twoRows);
+    grid-template-columns:var(--threeColumns);
     height:75px;
     background-color:var(--darkBlue);
 }
@@ -72,17 +75,29 @@ header nav a{
     width:80px;
     margin-top:10px;
 }
+.returnBlog{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing:5px;
+}
+.returnBlog a{
+    color:#FFF;
+    font-size:2em;
+}
 .about-link{
     display:flex;
     justify-content: flex-end;
     align-items: center;
     margin-right:50px;
-    font-size:20px;
+    font-size:2em;
+    letter-spacing:5px;
 }   
 .about-link a{
     color:#FFF;
 }
-.about-link a:hover{
+.about-link a:hover ,
+.returnBlog a:hover{
     text-decoration:underline;
     transition: all 0.2s ease 0s;
     color: var(--greenColor);   
@@ -192,7 +207,7 @@ main .blog-news-container .blog-news-main{
     display:grid;
     grid-template-columns: var(--threeColumns);
     grid-gap:10px;
-    margin-bottom:50px;
+    margin:100px 0;
 }
 
 .grid-size{
@@ -301,11 +316,11 @@ main .blog-news-container .blog-news-main{
 .zbrushGrid{
     grid-template-areas: "zbrushLeft zbrushUser zbrushRight";
     display:grid;
-    grid-template-columns: repeat(3,33.3%);
+    grid-template-columns: repeat(3,33.33%);
+    height:100%;
 }
 .zbrushImgContainer{
     overflow: hidden;
-    max-height: 83vh;
 }
 .zbrushLeft{
     grid-area:zbrushLeft;
@@ -314,7 +329,7 @@ main .blog-news-container .blog-news-main{
     margin-left:-1200px;
 }
 .zbrushRight img{
-    margin-left:-1000px;
+    margin-left:-800px;
 }
 .zbrushLeft img, .zbrushRight img{
     height:100%;
@@ -325,8 +340,13 @@ main .blog-news-container .blog-news-main{
     grid-area:zbrushUser;
     background-color: #1d1d1d;
 }
+.zbrushUser-arrange{
+    display: flex;
+    flex-direction:column;
+    height:100%;
+    justify-content: space-around;
+}
 .userDescription, .userVideo h2{
-    margin-top:100px;
     text-align: center;
     color:white;
     font-size:2em;
