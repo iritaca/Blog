@@ -19,7 +19,7 @@ body{
     right:0;
 }
 .grid-container{
-    max-width:1024px;
+    max-width:2600px;
     margin:0 auto;
 }
 a{
@@ -79,7 +79,8 @@ header nav a{
 }
 
 .home-main{
-    background-image:url('../images/sand03.jpg');
+    background-image:url('../images/NewSand/50mil_Front_Frame001.png');
+    background-color: #222;
     background-repeat: no-repeat;
     background-size: cover;
     background-position:center;
@@ -162,77 +163,90 @@ main .blog-news-container .blog-news-main{
 
 /* Step by step guide */
 .steps-main-container{
-    padding:0 50px 220px;
+    padding:0 50px;
 }
-.steps-main-container h2,
-.step-container h4{
-    border-bottom:1px solid #cdd2da;
-    padding-bottom:20px;
-    text-align:center;
-}
-.steps-guide{
-    text-align: center;
-}
-.step-container{
-    display:inline-block;
-    margin-top:20px;
-    max-width:30%;
-    height: 273px;
-}
-.step-container img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-.step-container p{
-    margin-bottom:20px;
-}
-.step-container a{
-    border:1px solid var(--greenColor);
-    padding:5px 15px;
-    font-size:16px;
-}
-/* End of idea 1 */
-/* Steps Grid Idea 2 */
-.steps-grid-guide{
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-areas: "root . grains"
-                        ". trejo ."
-                        "zen . plane";
 
+/* MAIN INSTRUCTIONS */
+
+
+.grid3Columns{
+    display:grid;
+    grid-template-columns: repeat(3,33%);
+    grid-gap:10px;
 }
+
+.steps-grid-guide{
+    grid-template-areas: "root grains trejo";
+}
+
 .grid-size{
-    height: 300px;
-    text-align: center;
+    border-radius:5px;
+    overflow: hidden;
+    text-align:center;
+    padding-bottom: 30px;
+}
+.grid-size .grid-imageContainer{
+    margin:0;
 }
 .grid-size img{
     width:100%;
-    height:100%;
-    object-fit:cover;
+    height: 300px;
+    object-fit: cover;
+    background-color: #222;
 }
-.grid-size p{}
-.grid-size a{
+.grid-size .grid-details{
+    margin:20px 10px;
+}
+.grid-size .grid-detailsTitle{
+    font-weight:700;
+    font-size:2em;
+    margin:2px 1px;
+}
+.grid-size .grid-detailsDescription{
+    margin-bottom:30px;
+}
+.grid-size .grid-linkPage{
+    color:var(--greenColor);
+    border: 2px solid ;
+    padding:10px 20px;
+    border-radius: 5px;
+    letter-spacing: 3px;
+    font-weight: 500;
+    font-size:1em;
+}
+.grid-size .grid-linkPage:hover{
+    background-color: var(--greenColor);
+    color: var(--lightGray);
+    border:none;
+    box-shadow: 2px 2px 6px 2px rgba(129,187,38,1);
+    transition: all 0s ease 0s;
+}
+.links-page{
     padding:10px 5px;
+    margin-top:20px;
     border:1px solid var(--greenColor);
-}
+} 
+
 .root{
     grid-area:root;
 }
 .grains{
     grid-area:grains;
 }
-
-.zen{
-    grid-area:zen;
-}
 .trejo{
     grid-area:trejo;
-}
-.plane{
-    grid-area:plane;
-}
+} 
+/* End main instructions */
+
+/* ZBRUSH GRID TEMPLATE */
+
+
+/* FOOTER */
 .footer{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
     height:60px;
     background-color:var(--greenColor);
     display: flex;

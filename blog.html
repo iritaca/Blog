@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="css/icons.css">
     <link rel="stylesheet" href="css/animation.css">
     <link rel="icon" href="images/logo.png">
+    <script>
+        document.oncontextmenu = function(){
+            return false;
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -31,58 +36,62 @@
     <main>
         <section class="blog-news-container">
             <article class="blog-news-main grid-container">
-                <h1 class="title">News</h1>
+                <h1 class="title">Welcome</h1>
                 <div class="videoContainer">
                     <iframe class="video" src="https://player.vimeo.com/video/317253486" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
                 </div>
                 <div class="description">
-                    <h2>Houdini Roots Tutorial</h2>
-                    <p>In this blog I want to show you how to create some type of root animation inside Houdini. By bringing any object.<br> For this example I will use an amazing dragon sculpture, from the 3D artist Oscar Trejo. (I will add a section in case you want to learn more from his art.</p>
+                    <h2>Houdini Roots Instructions</h2>
+                    <p>In this blog I want to show you how to create some type of root or vein animation inside Houdini. The beauty and magic of the procedural wolrd let's you follow the instructions and create almost the same results with different models.<br> For both examples, I have the honor to experiemnt with some amazing dragon sculptures, from the 3D artist Oscar Trejo. Below you will find different articles to know a little bit of my process of creating this type of animation, including an article for the 3D artist, you really must take a look at all the incredible sculptures and models from Oscar.</p>
                 </div>
             </article>
         </section>
         <section class="steps-main-container">
             <div class="grid-container">
                 <h2>A little guide</h2>
-                <div class="steps-grid-guide">
+                <div class="steps-grid-guide grid3Columns">
                     <div class="grid-size root">
-                        <img src="https://cdna.artstation.com/p/assets/images/images/015/923/618/large/isaac-rios-frame72-12.jpg?1550184310" alt="Houdini procedural roots">
-                        <h4>Houdini - procedural Roots</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur qui nostrum quisquam at esse neque quam quaerat maiores, officiis accusamus aspernatur perspiciatis! Nemo, distinctio doloremque accusamus at magnam est reiciendis.</p>
-                        <a href="roots.html" class="grains1">Learn a little bit more</a>
+                        <figure class="grid-imageContainer">
+                            <img src="images/NewSand/key135.jpg" alt="Houdini procedural roots">
+                        </figure>
+                        <div class="grid-details">
+                            <h4 class="grid-detailsTitle">Houdini - procedural Roots</h4>
+                            <p class="grid-detailsDescription">From adding a model to take some points an connect them, thats how I'm going to describe my main process to get this animation.</p>
+                            <a href="roots.html" class="grid-linkPage">Learn more</a>
+                        </div>
                     </div>
+
                     <div class="grid-size grains">
-                        <img src="https://cdnb.artstation.com/p/assets/images/images/015/923/661/large/isaac-rios-sand01.jpg?1550184471" alt="Houdini Sand sculpture">
-                        <h4>Houdini - procedural Roots</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur qui nostrum quisquam at esse neque quam quaerat maiores, officiis accusamus aspernatur perspiciatis! Nemo, distinctio doloremque accusamus at magnam est reiciendis.</p>
-                        <a href="roots.html" class="grains1">Learn a little bit more</a>
+                        <figure class="grid-imageContainer">
+                            <img src="images/NewSand/4mil_after_PointReplicate_body_left.png" alt="Houdini Sand sculpture">
+                        </figure>
+                        <div class="grid-details">
+                            <div class="grid-details">
+                                <h4 class="grid-detailsTitle">Houdini - Sand statue</h4>
+                                <p class="grid-detailsDescription">Here you'll find some renders of the last sand sculpture.</p>
+                                <a href="grains.html" class="grid-linkPage">Learn more</a>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="grid-size trejo">
-                        <img src="images/draggy_Oscart.jpg" alt="Egyptian Dragon digital sculpture by Oscar Trejo ">
-                        <h4>Zbrush - Egyptian Dragon, by Oscar Trejo</h4>
-                        <p>Oscar's Bio, Long story short:
-                            3D artist from a magical place that people tend to call Mexico. Thanks to the power of the all-mighty Internet, has been able to work for over 6 years in a variety of different projects from video games & TV, to jewelry design & 3D printing..</p>
-                        <a href="roots.html" class="grains1">Learn a little bit more</a>
-                    </div>
-                    <div class="grid-size zen">
-                        <img src="https://cdna.artstation.com/p/assets/images/images/015/189/632/large/isaac-rios-1.jpg?1547422285" alt="Zen sand garden">
-                        <h4>Houdini - procedural Roots</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur qui nostrum quisquam at esse neque quam quaerat maiores, officiis accusamus aspernatur perspiciatis! Nemo, distinctio doloremque accusamus at magnam est reiciendis.</p>
-                        <a href="roots.html" class="grains1">Learn a little bit more</a>
-                    </div>
-                    <div class="grid-size plane">
-                        <img src="images/plane.jpg" alt="plane sand sculpture">
-                        <h4>Houdini - Sand plane</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur qui nostrum quisquam at esse neque quam quaerat maiores, officiis accusamus aspernatur perspiciatis! Nemo, distinctio doloremque accusamus at magnam est reiciendis.</p>
-                        <a href="roots.html" class="grains1">Learn a little bit more</a>
+                        <figure class="grid-imageContainer">
+                            <img src="https://cdnb.artstation.com/p/assets/images/images/027/106/035/large/oscar-trejo-5.jpg?1590605213" alt="Eternal Dragon digital sculpture by Oscar Trejo ">
+                        </figure>
+                        <div class="grid-details">
+                            <h4 class="grid-detailsTitle">Zbrush - Digital Sculpt, by Oscar Trejo</h4>
+                            <p class="grid-detailsDescription">Oscar's Bio, Long story short:
+                                3D artist from a magical place that people tend to call Mexico. Thanks to the power of the all-mighty Internet, has been able to work for over 6 years in a variety of different projects from video games & TV, to jewelry design & 3D printing.</p>
+                            <a href="zbrush.html" class="grid-linkPage">Learn more</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <footer class="footer">
-            <p>Website developed by <a href="">Iritaca</a>, Isaac Rios 2020</p>
-            <img src="images/logo.png" alt="Iritaca logo">
-        </footer>
     </main>
+            <footer class="footer">
+                <p>Website developed by <a href="">Iritaca</a>, Isaac Rios 2020</p>
+                <img src="images/logo.png" alt="Iritaca logo">
+            </footer>
 </body>
 </html>
