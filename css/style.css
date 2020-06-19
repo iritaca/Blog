@@ -3,6 +3,8 @@
     --greenColor:#81bb26;
     --lightGray:#e3e7f1;
     --darkBlue:#0a222e;
+    --twoRows:repeat(2,1fr);
+    --threeColumns:repeat(3,33%);
 }
 body{
     margin:0;
@@ -37,7 +39,7 @@ header{
     height:140px;
     width:100%;
     display: grid;
-    grid-template-rows:repeat(2,1fr);
+    grid-template-rows:var(--twoRows);
 }
 header .header-iconContainer{
     background-color:var(--greenColor);
@@ -57,7 +59,7 @@ header nav a{
 }
 .logo-container{
     display: grid;
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:var(--twoRows);
     height:70px;
     background-color:var(--darkBlue);
 }
@@ -127,16 +129,15 @@ header nav a{
     transition:all 0.5s ease 0s;
 }
 
-/* Blog Main News Area */
+/* BLOG WELCOME */
 main .blog-news-container{
     background-color:var(--lightGray);
     padding:10px 40px;
 }
 main .blog-news-container .blog-news-main{
     display: grid;
-    grid-template-columns:repeat(3,33%);
+    grid-template-columns:var(--threeColumns);
     grid-template-areas:
-                        /* "title . ." */
                         "video video description"
                         'video video description'
 }
@@ -147,7 +148,6 @@ main .blog-news-container .blog-news-main{
 .videoContainer{
     grid-area:video;
     width:100%;
-    /* height:0; */
     padding-top:56.25%;
     position:relative;
     margin:0 auto;
@@ -176,19 +176,19 @@ main .blog-news-container .blog-news-main{
     transition: all 0.2s ease 0s;
 }
 
-/* End Blog Main News Area */
+/* END BLOG WELCOME */
 
-/* Step by step guide */
+/* STEP BY STEP GUIDE */
 .steps-main-container{
     padding:0 50px;
 }
 
-/* MAIN INSTRUCTIONS */
+/* A LITTLE GUIDE */
 
 .steps-grid-guide{
     grid-template-areas: "root grains trejo";
     display:grid;
-    grid-template-columns: repeat(3,33%);
+    grid-template-columns: var(--threeColumns);
     grid-gap:10px;
     margin-bottom:50px;
 }
@@ -250,19 +250,26 @@ main .blog-news-container .blog-news-main{
 .trejo{
     grid-area:trejo;
 } 
-/* End main instructions */
+/* END A LITTLE GUIDE */
+
+/* PROCEDURAL ROOTS GUIDE */
+
+/* END PROCEDURAL ROOTS GUIDE */
+
+/* GRAINS TEMPLATE */
+    
+
+/* END GRAINS TEMPLATE */
 
 /* ZBRUSH GRID TEMPLATE */
 .zbrushGrid{
     grid-template-areas: "zbrushLeft zbrushUser zbrushRight";
     display:grid;
     grid-template-columns: repeat(3,33.3%);
-    /* grid-gap:2px; */
 }
 .zbrushImgContainer{
     overflow: hidden;
     max-height: 83vh;
-    /* align-content: stretch; */
 }
 .zbrushLeft{
     grid-area:zbrushLeft;
@@ -281,7 +288,6 @@ main .blog-news-container .blog-news-main{
 .zbrushUser{
     grid-area:zbrushUser;
     background-color: #1d1d1d;
-    /* border: 1px solid red; */
 }
 .userDescription, .userVideo h2{
     margin-top:100px;
@@ -314,13 +320,13 @@ main .blog-news-container .blog-news-main{
     grid-area:zbrushRight;
     
 }
-
+/* ZBRUSH GRID TEMPLATE */
+/* FOOTER */
 .footer{
     position:fixed;
     bottom:0;
     width:100%;
 }
-/* FOOTER */
 .contact{
     background-color: var(--darkBlue);
     text-align: center;
@@ -348,3 +354,4 @@ main .blog-news-container .blog-news-main{
     margin-left:10px;
     
 }
+/* FOOTER */
