@@ -134,7 +134,7 @@ main .blog-news-container{
 }
 main .blog-news-container .blog-news-main{
     display: grid;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(3,33%);
     grid-template-areas:
                         /* "title . ." */
                         "video video description"
