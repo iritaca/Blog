@@ -25,9 +25,11 @@
             </nav>
         </section>
         <section class="logo-container">
-            <a href="index.html">
-                <img src="images/logo.png" alt="Logo iritaca">
-            </a>
+            <figure class="logo-imageContainer">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Logo iritaca">
+                </a>
+            </figure>
             <div class="returnBlog">
                 <!-- <a href="blog.html">Return to blog</a> -->
             </div>
@@ -39,12 +41,13 @@
     <main class="grid-container-height">
         <section class="blog-news-container">
             <article class="blog-news-main grid-container">
-                <!-- <h1 class="title">Welcome</h1> -->
+                <h1 class="title">Welcome</h1>
                 <div class="videoContainer">
-                    <iframe class="video" src="https://player.vimeo.com/video/317253486" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    <div class="videoContainer-responsive">
+                        <iframe class="video" src="https://player.vimeo.com/video/317253486" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
                 </div>
                 <div class="description">
-                    <h2>Welcome</h2>
                     <p>In this blog I want to show you how to create some type of root or vein animation inside Houdini. The beauty and magic of the procedural wolrd let's you follow the instructions and create almost the same results with different models.<br> For both examples, I have the honor to experiement with some amazing dragon sculptures, from the 3D artist <a id="oscarSite" href="https://osc-art.com/" target="_blank">Oscar Trejo</a>. Below you will find different articles to know a little bit of my process of creating this type of animation, including an article for the 3D artist, you really must take a look at all his incredible art.</p>
                 </div>
             </article>
@@ -53,7 +56,7 @@
             <div class="grid-container">
                 <h2>A little guide</h2>
                 <div class="steps-grid-guide">
-                    <div class="grid-size root">
+                    <article class="grid-size root">
                         <figure class="grid-imageContainer">
                             <img src="images/NewSand/key135.jpg" alt="Houdini procedural roots">
                         </figure>
@@ -62,9 +65,9 @@
                             <p class="grid-detailsDescription">From adding a model to take some points an connect them, thats how I'm going to describe my main process to get this animation.</p>
                             <a href="roots.html" class="grid-linkPage">Learn more</a>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="grid-size grains">
+                    <article class="grid-size grains">
                         <figure class="grid-imageContainer">
                             <img src="images/NewSand/4mil_after_PointReplicate_body_left.png" alt="Houdini Sand sculpture">
                         </figure>
@@ -75,9 +78,9 @@
                                 <a href="grains.html" class="grid-linkPage">Learn more</a>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="grid-size trejo">
+                    <article class="grid-size trejo">
                         <figure class="grid-imageContainer">
                             <img src="https://cdnb.artstation.com/p/assets/images/images/027/106/035/large/oscar-trejo-5.jpg?1590605213" alt="Eternal Dragon digital sculpture by Oscar Trejo ">
                         </figure>
@@ -86,7 +89,7 @@
                             <p class="grid-detailsDescription">Take a look into a very short summary of the artist, enjoy by learning digital sculpting with him and get amazed of his dragon statue! I invite you to visit Oscar's site, he have different type of artwork.</p>
                             <a href="zbrush.html" class="grid-linkPage">Learn more</a>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
