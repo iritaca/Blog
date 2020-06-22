@@ -105,7 +105,8 @@ header nav a{
     color:#FFF;
 }
 .about-link a:hover ,
-.returnBlog a:hover{
+.returnBlog a:hover,
+.userContact a:hover{
     padding-bottom:10px;
     border-bottom:1px solid;
     transition: all 0.2s ease 0s;
@@ -420,7 +421,50 @@ main .blog-news-container .blog-news-main{
     
 }
 /* ZBRUSH GRID TEMPLATE */
+
+/* ABOUT ME */
+.about{
+    width:70%;
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "userPic userDetails";
+}
+.aboutUser{
+    grid-area: userPic;
+    margin:0;
+    padding:10px;
+    text-align: center;
+}
+
+.userData{
+    grid-area:userDetails;
+}
+.userData .userName{
+    font-size:1.5em;
+}
+.userData .userCareer{
+    font-size:2em;
+}
+.userData p{
+    font-size:2.3em;
+    padding-left:20px;
+}
+.userData h4,
+ .userData a{
+    font-size:2.3em;
+}
+.userContact a{
+    border-bottom: 1px solid black;
+    padding-bottom:3px;
+    margin-left:20px;
+    cursor: pointer;
+}
+
+/* ENDS ABOUT ME */
+
 /* FOOTER */
+
 /* .footer{
     position:fixed;
     bottom:0;
