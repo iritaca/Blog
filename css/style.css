@@ -36,6 +36,7 @@ body{
     border-bottom:1px solid var(--lightGray);
     margin:50px 0;
     font-size:3em;
+    letter-spacing: 5px;
 }
 a{
     text-decoration:none;
@@ -266,6 +267,7 @@ main .blog-news-container .blog-news-main{
 .grid-size .grid-detailsDescription{
     margin-bottom:30px;
     font-size:2em;
+    padding:0 60px;
 }
 .grid-size .grid-linkPage{
     color:var(--greenColor);
