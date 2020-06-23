@@ -38,41 +38,131 @@
             </div>
         </section>
     </header>
-    <main class="grid-container-height">
+    <main >
             <div class="grid-container">
                 <h1>Houdini's procedural roots</h1>
-                <!-- <div class="sand-grid">
-                    <div class="sand-grid-size sand1">
-                        <figure class="sand-grid-imageContainer">
-                            <img src="images/NewSand/Grains_Right.png" alt="Houdini sand sculpture">
+                <div class="steps-list">
+                    <div class="step stepOne">
+                        <figure class="step-imageContainer">
+                            <img src="images/Instructions/Houdini_step1.png" alt="Placing the object inside Houdini's software.">
                         </figure>
+                        <section class="step-description">
+                            <h3 class="step-title">Step 1: Add your model inside Houdini</h3>
+                            <p>The first step is to bring your model, you can either use a Houdini model or bring it from other software, the key is that your object should be a single connected mesh, because our animated veins will walk on the  model surface.</p>
+                        </section>
                     </div>
-                    <div class="sand-grid-size sand2">
-                        <figure class="sand-grid-imageContainer">
-                            <img src="images/NewSand/Grains_Front.png" alt="Houdini sand sculpture">
+                    <div class="step stepTwo">
+                        <figure class="step-imageContainer">
+                            <img src="images/Instructions/Houdini_step2_Option01.png" alt="Placing the object inside Houdini's software.">
                         </figure>
+                        <section class="step-description">
+                            <h3 class="step-title">Step 2: Delete points with delete by range</h3>
+                            <p>There are many ways to achieve an effect or animation inside Houdini. For this part I present you the easiest and the complex one. The easiest would be to use an all set node that help you with what you need. And that's the "Delete node", set the operation to "delete by range" from the delete node, remember to change the node entity to points.</p>
+                        </section>
                     </div>
-                    <div class="sand-grid-size sand3">
-                        <figure class="sand-grid-imageContainer">
-                            <img src="images/NewSand/Grains_Right_v02.png" alt="Houdini sand sculpture">
+                    <div class="step stepTwo_wrangle">
+                        <figure class="step-imageContainer">
+                            <img src="images/Instructions/Houdini_step2_OptionWrangle.png" alt="Placing the object inside Houdini's software.">
                         </figure>
+                        <section class="step-description">
+                            <h3 class="step-title">Step 2: Deleting points using an Attribute Wrangle</h3>
+                            <p>The attribute wrangle allows us to tweak attributes from the incoming geometry by executing some VEX code.I used a condition to remove some points by creating a random value for each point number and evaluated by using a threshold value.</p>
+                        </section>
                     </div>
-                    <div class="sand-grid-size sand4">
-                        <figure class="sand-grid-imageContainer">
-                            <img src="images/NewSand/Grains_Roots_Left.png" alt="Houdini sand sculpture">
+                    <div class="step stepThree-start">
+                        <figure class="step-imageContainer">
+                            <img src="images/Instructions/Houdini_step3_StartPoints.png" alt="Placing the object inside Houdini's software.">
                         </figure>
+                        <section class="step-description">
+                            <h3 class="step-title">Step 3: Starting Points</h3>
+                            <p>For our roots we need to stablish some starting points in our main model, so for this part I used Group node, with the name "startPoints", and with the help of a box I could place my helping object to select where I want my starting points to be.</p>
+                        </section>
                     </div>
-                    <div class="sand-grid-size sand5">
-                        <figure class="sand-grid-imageContainer">
-                            <img src="images/NewSand/50mil_left.png" alt="Houdini sand sculpture">
+                    <div class="step stepThree-end">
+                        <figure class="step-imageContainer">
+                            <img src="images/Instructions/Houdini_step3_EndPoints.png" alt="Placing the object inside Houdini's software.">
                         </figure>
+                        <section class="step-description">
+                            <h3 class="step-title">Step 4: End Points</h3>
+                            <p>Also we will use another group of points called "End Points",(You can name both groups however you want, the important here is to have the names, because we are going ot use them in the next step.</p>
+                        </section>
                     </div>
-                    <div class="sand-grid-size sand6">
-                        <figure class="sand-grid-imageContainer">
-                            <img src="images/NewSand/50mil_left_Frame120.png" alt="Houdini sand sculpture">
+                    <div class="step stepFive">
+                        <figure class="step-imageContainer">
+                            <img src="images/Instructions/Houdini_step4_shortPath.png" alt="Placing the object inside Houdini's software.">
                         </figure>
+                        <section class="step-description">
+                            <h3 class="step-title">Step 5: Shortest Path</h3>
+                            <p>The first step is to bring your model, you can either use a Houdini model or bring it from other software, the importance here is that your object should be a single connected mesh, because our animated veins will walk on the  model surface.</p>
+                        </section>
                     </div>
-                </div> -->
+                    <div class="step stepSix">
+                        <figure class="step-imageContainer">
+                            <img src="images/Instructions/Houdini_step5_Carve.png" alt="Placing the object inside Houdini's software.">
+                        </figure>
+                        <section class="step-description">
+                            <h3 class="step-title">Step 6: Carve Node</h3>
+                            <p>The first step is to bring your model, you can either use a Houdini model or bring it from other software, the importance here is that your object should be a single connected mesh, because our animated veins will walk on the  model surface.</p>
+                        </section>
+                    </div>
+                    <div class="step stepSeven">
+                        <figure class="step-imageContainer">
+                            <img src="images/Instructions/Houdini_step5_Carve.png" alt="Placing the object inside Houdini's software.">
+                        </figure>
+                        <section class="step-description">
+                            <h3 class="step-title">Step 7: Animation</h3>
+                            <p>The first step is to bring your model, you can either use a Houdini model or bring it from other software, the importance here is that your object should be a single connected mesh, because our animated veins will walk on the  model surface.</p>
+                        </section>
+                    </div>
+                </div>
+                <h2>Bonus</h2>
+                <div class="bonus-list">
+                    <div class="step stepBonusOne">
+                        <figure class="step-imageContainer">
+                            <img src="images/Instructions/Houdini_step1.png" alt="Placing the object inside Houdini's software.">
+                        </figure>
+                        <section class="step-description">
+                            <h3 class="step-title">Adding the width</h3>
+                            <p>The first step is to bring your model, you can either use a Houdini model or bring it from other software, the importance here is that your object should be a single connected mesh, because our animated veins will walk on the  model surface.</p>
+                        </section>
+                    </div>
+                    <div class="step stepBonusTwo">
+                        <figure class="step-imageContainer">
+                            <img src="images/Instructions/Houdini_step1.png" alt="Placing the object inside Houdini's software.">
+                        </figure>
+                        <section class="step-description">
+                            <h3 class="step-title">Adding the width</h3>
+                            <p>The first step is to bring your model, you can either use a Houdini model or bring it from other software, the importance here is that your object should be a single connected mesh, because our animated veins will walk on the  model surface.</p>
+                        </section>
+                    </div>
+                    <div class="step stepBonusThree">
+                        <figure class="step-imageContainer">
+                            <img src="images/Instructions/Houdini_step1.png" alt="Placing the object inside Houdini's software.">
+                        </figure>
+                        <section class="step-description">
+                            <h3 class="step-title">Adding the width</h3>
+                            <p>The first step is to bring your model, you can either use a Houdini model or bring it from other software, the importance here is that your object should be a single connected mesh, because our animated veins will walk on the  model surface.</p>
+                        </section>
+                    </div>
+                    <div class="step BonusOne">
+                        <figure class="step-imageContainer">
+                            <img src="images/Instructions/Houdini_step1.png" alt="Placing the object inside Houdini's software.">
+                        </figure>
+                        <section class="step-description">
+                            <h3 class="step-title">Adding the width</h3>
+                            <p>The first step is to bring your model, you can either use a Houdini model or bring it from other software, the importance here is that your object should be a single connected mesh, because our animated veins will walk on the  model surface.</p>
+                        </section>
+                    </div>
+                    <div class="step BonusTwo">
+                        <figure class="step-imageContainer">
+                            <img src="images/Instructions/Houdini_step1.png" alt="Placing the object inside Houdini's software.">
+                        </figure>
+                        <section class="step-description">
+                            <h3 class="step-title">Adding the width</h3>
+                            <p>The first step is to bring your model, you can either use a Houdini model or bring it from other software, the importance here is that your object should be a single connected mesh, because our animated veins will walk on the  model surface.</p>
+                        </section>
+                    </div>
+                </div>
             </div>
     </main>
     <footer class="footer">
