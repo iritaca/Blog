@@ -111,7 +111,7 @@
                         </figure>
                         <section class="step-description">
                             <h3 class="step-title">Animation</h3>
-                            <p>Congratulations! There's some bonus steps to personalize more your root animation. You'll find them below.</p>
+                            <p>Congratulations! There's some bonus steps to personalize more your root animation. You'll find them below. (Always remember that you can send me an email if you need some help.)</p>
                         </section>
                     </div>
                 </div>
@@ -119,29 +119,37 @@
                 <div class="bonus-list">
                     <div class="step stepBonusOne">
                         <figure class="step-imageContainer">
-                            <img src="images/Instructions/Houdini_step1.png" alt="Placing the object inside Houdini's software.">
+                            <img src="images/Instructions/Houdini_step6_width.png" alt="Placing the object inside Houdini's software.">
                         </figure>
                         <section class="step-description">
-                            <h3 class="step-title">Adding the width</h3>
-                            <p>The first step is to bring your model, you can either use a Houdini model or bring it from other software, the importance here is that your object should be a single connected mesh, because our animated veins will walk on the  model surface.</p>
+                            <h3 class="step-title">Using the "curve u" attribute</h3>
+                            <p>At this point you can add a "resample node" to get the "@curveu" attribute, with this you will get some point value according to the point spacing of the input. Which can be used to create results like width or color.</p>
+                            <p>First we will create a ramp value to control how wide our curve should be. Add an Attribute wrangle to start coding your own @width control. Our VEXpression will go like this:</p>
+                            <p>@width=fit(chramp("ramp_width",@curveu),0,1,ch("min_width"), ch("max_width"))</p>
+                            <p>Remember to click on "Creates spare parameters for each unique call of ch(), to generate the changes inside our parameter tab.</p>
                         </section>
                     </div>
                     <div class="step stepBonusTwo">
                         <figure class="step-imageContainer">
-                            <img src="images/Instructions/Houdini_step1.png" alt="Placing the object inside Houdini's software.">
+                            <img src="images/Instructions/Houdini_step7_Color.png" alt="Placing the object inside Houdini's software.">
                         </figure>
                         <section class="step-description">
-                            <h3 class="step-title">Adding the width</h3>
-                            <p>The first step is to bring your model, you can either use a Houdini model or bring it from other software, the importance here is that your object should be a single connected mesh, because our animated veins will walk on the  model surface.</p>
+                            <h3 class="step-title">Creating a Ramp, with attribute VOP</h3>
+                            <p>As I told you before, there are many ways to achieve your results inside Houdini, so we are going to use the same "@curveu" to create a zustomizable ramp to add some colors.</p>
+                            <p>First add a bind node to bring your attribute inside, and inicializate it by adding the name curveu and the type must be Float.</p>
+                            <p>Add a multiply node, sometimes I like to create a multiplier to get more value with the incoming results, create a parameter, should be a float too, and it can have any name, I named it Color Mult, it'll be easier for others to play with your parameters if your clear with the names.</p>
+                            <p>Add a ramp parameter and link the multiply, again add a good name so you could remember what it does. </p>
+                            <p>And finally connect it to your Cd output.</p>
                         </section>
                     </div>
                     <div class="step stepBonusThree">
                         <figure class="step-imageContainer">
-                            <img src="images/Instructions/Houdini_step1.png" alt="Placing the object inside Houdini's software.">
+                            <img src="images/Instructions/Houdini_step9_PolyWire.png" alt="Placing the object inside Houdini's software.">
                         </figure>
                         <section class="step-description">
-                            <h3 class="step-title">Adding the width</h3>
-                            <p>The first step is to bring your model, you can either use a Houdini model or bring it from other software, the importance here is that your object should be a single connected mesh, because our animated veins will walk on the  model surface.</p>
+                            <h3 class="step-title">And for the final touch.</h3>
+                            <p>Create a "Polywire node", and at "width radius" write @width.</p>
+                            <p>With this your curve will get linked to the attribute we wrote before and the you will have more controls on the width for every curve.</p>
                         </section>
                     </div>
                     <div class="step BonusOne">
@@ -149,8 +157,8 @@
                             <img src="images/Instructions/Houdini_step1.png" alt="Placing the object inside Houdini's software.">
                         </figure>
                         <section class="step-description">
-                            <h3 class="step-title">Adding the width</h3>
-                            <p>The first step is to bring your model, you can either use a Houdini model or bring it from other software, the importance here is that your object should be a single connected mesh, because our animated veins will walk on the  model surface.</p>
+                            <h3 class="step-title">Animation</h3>
+                            <p></p>
                         </section>
                     </div>
                     <div class="step BonusTwo">
@@ -158,8 +166,8 @@
                             <img src="images/Instructions/Houdini_step1.png" alt="Placing the object inside Houdini's software.">
                         </figure>
                         <section class="step-description">
-                            <h3 class="step-title">Adding the width</h3>
-                            <p>The first step is to bring your model, you can either use a Houdini model or bring it from other software, the importance here is that your object should be a single connected mesh, because our animated veins will walk on the  model surface.</p>
+                            <h3 class="step-title">Animation</h3>
+                            <p>I hope you like this little journey and thank you for walking it with me, if you like it or have any doubts you can send me an email. I'll be glad to help you with any related project.</p>
                         </section>
                     </div>
                 </div>

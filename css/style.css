@@ -285,7 +285,7 @@ main .blog-news-container .blog-news-main{
 .bonus-list{
     display:grid;
     grid-template-columns: repeat(2,40%);
-    grid-gap:10px;
+    grid-gap:40px;
     justify-content: center;
     grid-template-areas: 
                         "stepBonusOne stepBonusTwo"
