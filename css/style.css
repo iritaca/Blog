@@ -161,12 +161,13 @@ header nav a{
 main .blog-news-container{
     background-color:var(--lightGray);
     padding:50px 40px;
+    /* height:50%; */
 }
 main .blog-news-container .blog-news-main{
     display: grid;
     grid-template-columns:var(--threeColumns);
     grid-template-rows: 100px 1fr 1fr;
-    height:1100px;
+    height:100%;
     grid-template-areas:". title ."
                         "video video description"
                         'video video description'
@@ -174,20 +175,19 @@ main .blog-news-container .blog-news-main{
 .title{
     grid-area:title;
     font-size:4em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    align-self: center;
+    justify-self: center;
 }
 .videoContainer{
     grid-area:video;
     width:90%;
-    /* overflow: hidden; */
+    justify-self: center;
+    align-self: center;
 }
 .videoContainer-responsive{
     position:relative;
     height: 0;
     padding:0;
-    /* object-fit: contain; */
     padding-top:56.25%;
 }
 .video{
@@ -198,12 +198,13 @@ main .blog-news-container .blog-news-main{
     left:0;
     min-width:100%;
     min-height:100%;
-
 }
 .description{
     grid-area:description;
     padding:0 10px;
     font-size: 3em;
+    justify-self: center;
+    align-self: center;
 }
 #oscarSite{
     text-decoration: underline;
@@ -315,25 +316,26 @@ main .blog-news-container .blog-news-main{
 
 /* END STEP BY STEP GUIDE */
 
-/* A LITTLE GUIDE */
+/* ARTICLES */
 
 .gridContainer-articles{
     display:grid;
+    flex: 1;
     grid-template-columns: var(--threeColumns);
     grid-template-areas: "root grains trejo";
-    grid-gap:10px;
-    width:100%;
-    height:900px;
-    margin:60px 0 100px;
+    /* grid-gap:10px; */
+    /* width:100%; */
+    height:1100px;
+    margin:60px 0;
 }
 
 .grid-size{
     border-radius:5px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     text-align:center;
-    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
 }
 .grid-size .grid-imageContainer{
     margin:0;
@@ -396,11 +398,7 @@ main .blog-news-container .blog-news-main{
 .trejo{
     grid-area:trejo;
 } 
-/* END A LITTLE GUIDE */
-
-/* PROCEDURAL ROOTS GUIDE */
-
-/* END PROCEDURAL ROOTS GUIDE */
+/* END ARTICLES */
 
 /* GRAINS TEMPLATE */
 .sand-backgroundColor{
@@ -598,3 +596,54 @@ main .blog-news-container .blog-news-main{
     
 }
 /* FOOTER */
+
+/* MEDIA QUERIES */
+@media screen and (max-width:3840px){
+
+}
+@media screen and (max-width:2400px){
+    .blog-news-container .description{
+        font-size:2.6em;
+    }
+    /* ARTICLES */
+    .grid-size{
+        justify-content: flex-start;
+    }
+    /* END ARTICLES */
+}
+@media screen and (max-width:1920px){
+    /* BLOG-NEWS */
+    main .blog-news-container{
+        padding:20px 40px;
+    }
+    main .blog-news-container .blog-news-main{
+        height:100%;
+    }
+    .blog-news-container .title{
+        font-size:3em;
+    }
+    .videoContainer{
+        align-self: center;
+        width:95%;
+    }
+    .blog-news-container .description{
+        font-size:2.2em;
+    }
+    /* END BLOG-NEWS */
+    /* ARTICLES */
+    .gridContainer-articles{
+        height:1100px;
+    }
+    .grid-size{
+        height:100%;
+        justify-content: flex-start;
+    }
+    .grid-size .grid-detailsDescription{
+        padding:0 10px;
+    }
+    .grid-size .grid-linkPage{
+        font-size:1.5em;
+    }
+    /* END ARTICLES */
+
+}
