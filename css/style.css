@@ -223,7 +223,7 @@ main .blog-news-container .blog-news-main{
 .steps-list{
     display:grid;
     grid-template-columns: repeat(5,18%);
-    grid-gap:10px;
+    grid-gap:15px;
     justify-content: center;
     grid-template-areas: ". stepOne . "
                         "stepTwo . stepTwo_wrangle"
@@ -254,6 +254,9 @@ main .blog-news-container .blog-news-main{
 .stepFive{
     grid-area:stepFive;
     grid-column:1 / 4;
+}
+.stepFive a{
+    text-decoration:underline;
 }
 .stepSix{
     grid-area:stepSix;

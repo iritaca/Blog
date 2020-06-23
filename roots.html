@@ -66,7 +66,7 @@
                         </figure>
                         <section class="step-description">
                             <h3 class="step-title">Step 2: Deleting points using an Attribute Wrangle</h3>
-                            <p>The attribute wrangle allows us to tweak attributes from the incoming geometry by executing some VEX code.I used a condition to remove some points by creating a random value for each point number and evaluated by using a threshold value.</p>
+                            <p>The attribute wrangle allows us to tweak attributes from the incoming geometry by executing some VEX code.I used a condition to remove some points by creating a random value for each point number and evaluated by using a threshold value. If your using this option try to keep your mesh connected, because we need the edges of the input surface geometry to be connected and fuse. </p>
                         </section>
                     </div>
                     <div class="step stepThree-start">
@@ -84,7 +84,7 @@
                         </figure>
                         <section class="step-description">
                             <h3 class="step-title">Step 4: End Points</h3>
-                            <p>Also we will use another group of points called "End Points",(You can name both groups however you want, the important here is to have the names, because we are going ot use them in the next step.</p>
+                            <p>Also we will use another group of points called "endPoints",(You can name both groups however you want, the important here is to have the names, because we are going ot use them in the next step.</p>
                         </section>
                     </div>
                     <div class="step stepFive">
@@ -92,8 +92,8 @@
                             <img src="images/Instructions/Houdini_step4_shortPath.png" alt="Placing the object inside Houdini's software.">
                         </figure>
                         <section class="step-description">
-                            <h3 class="step-title">Step 5: Shortest Path</h3>
-                            <p>The first step is to bring your model, you can either use a Houdini model or bring it from other software, the importance here is that your object should be a single connected mesh, because our animated veins will walk on the  model surface.</p>
+                            <h3 class="step-title">Step 5: Find Shortest Path</h3>
+                            <p>Here is where you will start to see some magic.  According to Houdini's documentation, from sideFx (<a href="https://www.sidefx.com/docs/houdini/nodes/sop/findshortestpath" target="_blank">shortest path link</a>) "This node finds the shortest paths through edges of the input surface geometry...". You can find a lot of data on how to create some amazing visuals with this powerful node. For this example you just need to tweak three parts. First add the "startPoints" group created in the step 3 to the Start Points option, then add your "endPoints" to the End Points Section. Now for last, go to selection menu on "Output Paths", we're going to use "From any start to each end".</p>
                         </section>
                     </div>
                     <div class="step stepSix">
@@ -102,7 +102,7 @@
                         </figure>
                         <section class="step-description">
                             <h3 class="step-title">Step 6: Carve Node</h3>
-                            <p>The first step is to bring your model, you can either use a Houdini model or bring it from other software, the importance here is that your object should be a single connected mesh, because our animated veins will walk on the  model surface.</p>
+                            <p>This is the main key for the animation, the "carve node" slices, or extract points from a primitive. By setting the "First U" option as close to 0, or even turn it off. For this example you just need to use the "Second U" option. I made some tests with two methods for the roots animation, one was manual, here you set a range of keyframes, and add them a value from 0 to 1... But we're going to use another option, where you only need the number of seconds that your animation will use to be completed, for this example I used 4 seconds, so instead of adding some keyframes we use the expression @Time/4. </p>
                         </section>
                     </div>
                     <div class="step stepSeven">
@@ -110,8 +110,8 @@
                             <img src="images/Instructions/Houdini_step5_Carve.png" alt="Placing the object inside Houdini's software.">
                         </figure>
                         <section class="step-description">
-                            <h3 class="step-title">Step 7: Animation</h3>
-                            <p>The first step is to bring your model, you can either use a Houdini model or bring it from other software, the importance here is that your object should be a single connected mesh, because our animated veins will walk on the  model surface.</p>
+                            <h3 class="step-title">Animation</h3>
+                            <p>Congratulations! There's some bonus steps to personalize more your root animation. You'll find them below.</p>
                         </section>
                     </div>
                 </div>
