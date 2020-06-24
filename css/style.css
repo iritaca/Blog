@@ -6,6 +6,8 @@
     --darkColor:#222;
     --twoRows:repeat(2,1fr);
     --threeColumns:repeat(3,33.33%);
+    --headerFoot:350px;
+    --headerNoContact:250px;
 }
 body{
     margin:0;
@@ -26,9 +28,7 @@ body{
     margin:0 auto;
 }
 .grid-container-height{
-    /* height:calc(2160px - 350px); */
-    height:calc(100vh - 350px);
-    max-height:2160px;
+    min-height:calc(100vh - 350px);
     box-sizing: border-box;
     border:1px solid ;
 }
@@ -298,6 +298,7 @@ main .blog-news-container .blog-news-main{
                         "stepBonusOne stepBonusTwo"
                         "stepBonusThree BonusOne"
                         "BonusTwo BonusTwo";
+    margin-bottom:50px;
 }
 .stepBonusOne{
     grid-area:stepBonusOne;
@@ -326,9 +327,9 @@ main .blog-news-container .blog-news-main{
 
 .gridContainer-articles{
     display:grid;
-    grid-template-columns: repeat(3,30%);
+    grid-template-columns: repeat(3,32%);
     grid-template-areas: "root grains trejo";
-    grid-gap:5%;
+    grid-gap:2%;
     height:1100px;
     margin:60px 0;
 }
@@ -425,6 +426,8 @@ main .blog-news-container .blog-news-main{
     .sand-grid-imageContainer{
         margin:0;
         width:100%;
+        height:100%;
+        
     }
     .sand-grid div img{
         width:100%;
@@ -454,11 +457,12 @@ main .blog-news-container .blog-news-main{
 /* END GRAINS TEMPLATE */
 
 /* ZBRUSH GRID TEMPLATE */
+
 .zbrushGrid{
     grid-template-areas: "zbrushLeft zbrushUser zbrushRight";
     display:grid;
     grid-template-columns:var(--threeColumns);
-    height:100%;
+    height: calc(2160px - var(--headerNoContact));
 }
 .zbrushImgContainer{
     overflow: hidden;
@@ -468,10 +472,10 @@ main .blog-news-container .blog-news-main{
     grid-area:zbrushLeft;
 }
 .zbrushLeft img{
-    margin-left:-1300px;
+    margin-left:-1430px;
 }
 .zbrushRight img{
-    margin-left:-800px;
+    margin-left:-950px;
 }
 .zbrushLeft img, .zbrushRight img{
     height:100%;
@@ -528,11 +532,10 @@ main .blog-news-container .blog-news-main{
 /* ABOUT ME */
 .about{
     width:80%;
-    margin:0 auto;
+    margin:200px auto;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-areas: "userPic userDetails";
-
 }
 .aboutUser{
     grid-area: userPic;
@@ -621,9 +624,6 @@ main .blog-news-container .blog-news-main{
     .grid-container{
         max-width:2300px;
     }
-    .grid-container-height{
-        max-height:calc(1440px - 350px);
-    }
     .blog-news-container .description{
         font-size:2.6em;
     }
@@ -636,8 +636,9 @@ main .blog-news-container .blog-news-main{
     }
     /* END ARTICLES */
     /* ZBRUSH GRID TEMPLATE */
-    .zbrushUser-arrange{
-        justify-content: initial;
+    
+    .zbrushGrid{
+        height:calc(1440px - var(--headerNoContact));
     }
     .zbrushUser-Logo{
         padding-top:20px;
@@ -655,6 +656,7 @@ main .blog-news-container .blog-news-main{
 /* ENDS ZBRUSH GRID TEMPLATE */
 .about{
     height:800px;
+    margin:50px auto;
 }
 .aboutUser{
     padding:0;
@@ -691,13 +693,11 @@ main .blog-news-container .blog-news-main{
 /* END STEP BY STEP GUIDE */
 }
 @media screen and (max-width:1920px){
+
     .grid-container{
         max-width:1800px;
     }
     /* BLOG-NEWS */
-    .grid-container-height{
-        max-height:1080px;
-    }
     main .blog-news-container{
         padding:20px 40px;
     }
@@ -740,15 +740,21 @@ main .blog-news-container .blog-news-main{
     }
     /* END ARTICLES */
 
-    /* ZBRUSH GRID TEMPLATE */   
+    /* ZBRUSH GRID TEMPLATE */  
+        .zbrushGrid{
+            height:calc(1080px - var(--headerNoContact));
+        } 
+        .zbrushUser-arrange{
+            justify-content:space-between;
+        }
         .userDescription, .userVideo h2{
             font-size:1.2em;
         }
         .zbrushLeft img{
-            margin-left:-460px;
+            margin-left:-530px;
         }
         .zbrushRight img{
-            margin-left:-320px;
+            margin-left:-400px;
         }
     /* ENDS ZBRUSH GRID TEMPLATE */
     /* ABOUT ME */
@@ -769,11 +775,28 @@ main .blog-news-container .blog-news-main{
         .step-description p{
             font-size:2em;
         }
+        .steps-list{
+            grid-template-columns: repeat(5,20%);
+        }
+        .bonus-list{
+            grid-gap:20px;
+        }
     /* END STEP BY STEP GUIDE */
 }
 @media screen and (max-width:1280px){
+    /* FRONTPAGE */
+    .appear p{
+        font-size:1.5em;
+    }
+    /* END FRONTPAGE */
+
     .grid-container{
         max-width:1100px;
+    }
+
+    .grid-container h2,h1{
+        font-size:2.2em;
+        margin:20px 0;
     }
     
     /* BLOG WELCOME */
@@ -805,4 +828,47 @@ main .blog-news-container .blog-news-main{
         font-size:0.8em;
     }
     /* END FOOTER */
+    /* ABOUT ME */
+    .about{
+        height:250px;
+    }
+    .userData .userName h2{
+        font-size:1em;
+        margin:10px 0;
+        padding-bottom:8px;
+    }
+    .userData .userCareer h3{
+        font-size:.5em;
+        margin:10px 0;
+    }
+    .userData p{
+        font-size:.8em;
+        padding-left:20px;
+    }
+    .userData h4,
+    .userData a{
+        font-size:.8em;
+        margin:10px 0;
+    }
+    /* .aboutUser{
+        width:90%;
+        text-align: center;
+    } */
+    .aboutUser img{
+        width:60%;
+        object-fit: cover;
+    }
+/* END ABOUT ME */
+/* ZBRUSH GRID TEMPLATE */
+    .zbrushGrid{
+        /* height:calc(720px - 350px); */
+    }
+    .zbrushLeft img{
+        margin-left: -800px;
+    }
+    .zbrushRight img{
+        margin-left: -400px;
+    }
+    
+/* END ZBRUSH GRID TEMPLATE */
 }
