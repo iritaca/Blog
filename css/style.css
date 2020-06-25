@@ -109,7 +109,8 @@ header nav a{
 }
 .about-link a:hover ,
 .returnBlog a:hover,
-.userContact a:hover{
+.userContact a:hover,
+.userWeb a:hover{
     padding-bottom:10px;
     border-bottom:1px solid;
     transition: all 0.2s ease 0s;
@@ -495,9 +496,21 @@ main .blog-news-container .blog-news-main{
 .zbrushUser a{
     width:100%;
     text-align: center;
+    cursor: pointer;
 }
+.userWeb{
+    width: 100%;
+    text-align: center;
+}
+.userWeb a{
+    color:white;
+    border-bottom:1px solid;
+    padding:5px;
+}
+
 .zbrushUser .zbrushUser-Logo{
     width:60%;
+    cursor: pointer;
 }
 .userDescription, .userVideo h2{
     text-align: center;
@@ -717,9 +730,10 @@ main .blog-news-container .blog-news-main{
     /* END BLOG-NEWS */
     /* ARTICLES */
     .gridContainer-articles{
-        
         height:800px;
+        margin:60px 20px;
     }
+     
     .grid-size img{
         height:400px;
         
