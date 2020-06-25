@@ -783,7 +783,7 @@ main .blog-news-container .blog-news-main{
         }
     /* END STEP BY STEP GUIDE */
 }
-@media screen and (max-width:1280px){
+@media screen and (max-width:1366px){
     /* FRONTPAGE */
     .appear p{
         font-size:1.5em;
@@ -828,6 +828,18 @@ main .blog-news-container .blog-news-main{
         font-size:0.8em;
     }
     /* END FOOTER */
+
+    /* STEP BY STEP GUIDE */
+    .steps-list,
+    .bonus-list{
+        display: block;
+    }
+    .step{
+        margin-bottom:15px;
+    }
+    
+    /* END STEP BY STEP GUIDE */
+
     /* ABOUT ME */
     .about{
         height:250px;
@@ -871,4 +883,7 @@ main .blog-news-container .blog-news-main{
     }
     
 /* END ZBRUSH GRID TEMPLATE */
+}
+@media screen and (max-width:1279px){
+    
 }
