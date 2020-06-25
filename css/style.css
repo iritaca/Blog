@@ -798,7 +798,7 @@ main .blog-news-container .blog-news-main{
 @media screen and (max-width:1366px){
     /* FRONTPAGE */
     .appear p{
-        font-size:1.5em;
+        font-size:2.5em;
     }
     /* END FRONTPAGE */
 
@@ -1036,5 +1036,35 @@ main .blog-news-container .blog-news-main{
     }
 }
 @media screen and (max-width:767px){
-    
+    /* ARTICLES */
+    main .blog-news-container .blog-news-main{
+        grid-template-rows: 150px 400px 1fr ;
+
+    }
+    .gridContainer-articles{
+        height:calc(550px * 3);
+    }
+    .grid-size{
+        height: 490px;
+        overflow: hidden;
+    }
+    .grid-imageContainer{
+        height:100%;
+    }
+    .grid-size img{
+        height: 100%;
+        object-fit: none;
+        
+    }
+    /* END ARTICLES */
+    /* ZBRUSH */
+    .zbrushLeft img{
+        margin-left: -750px;
+    }
+    /* END ZBRUSH */
+    /* ABOUT */
+    .useData a{
+        font-size: 1em ;
+    }
+    /* END ABOUT */
 }
