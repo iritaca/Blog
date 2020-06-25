@@ -501,6 +501,7 @@ main .blog-news-container .blog-news-main{
 .userWeb{
     width: 100%;
     text-align: center;
+    font-size:2em;
 }
 .userWeb a{
     color:white;
@@ -758,9 +759,6 @@ main .blog-news-container .blog-news-main{
         .zbrushGrid{
             height:calc(1080px - var(--headerNoContact));
         } 
-        .zbrushUser-arrange{
-            justify-content:space-between;
-        }
         .userDescription, .userVideo h2{
             font-size:1.2em;
         }
@@ -805,7 +803,7 @@ main .blog-news-container .blog-news-main{
     /* END FRONTPAGE */
 
     .grid-container{
-        max-width:1100px;
+        max-width:1200px;
     }
 
     .grid-container h2,h1{
@@ -856,34 +854,40 @@ main .blog-news-container .blog-news-main{
 
     /* ABOUT ME */
     .about{
-        height:250px;
-    }
-    .userData .userName h2{
-        font-size:1em;
-        margin:10px 0;
-        padding-bottom:8px;
-    }
-    .userData .userCareer h3{
-        font-size:.5em;
-        margin:10px 0;
-    }
-    .userData p{
-        font-size:.8em;
-        padding-left:20px;
-    }
-    .userData h4,
-    .userData a{
-        font-size:.8em;
-        margin:10px 0;
-    }
-    /* .aboutUser{
-        width:90%;
-        text-align: center;
-    } */
-    .aboutUser img{
-        width:60%;
-        object-fit: cover;
-    }
+        width:100%;
+        grid-template-columns: 100%;
+        grid-template-areas:"userPic"
+                            "userDetails";
+        height:100%;
+        }
+        .aboutUser{
+            width:50%;
+            margin:0 auto;
+        }
+        .aboutUser img{
+            width:100%;
+        }
+        .userData{
+            font-size:2.2em;
+            text-align:center;
+            padding:0 30px;
+        }
+        .userData .userCareer{
+            font-size:1.2em;
+            margin:20px 0;
+        }
+        .userData .userName h2{
+            font-size:1em;
+        }
+        .userData h4,
+        .userData p{
+            font-size:1.1em;
+            margin:20px 0;
+            padding-left:0;
+        }
+        .userData a{
+            font-size:1.3em;
+        }
 /* END ABOUT ME */
 /* ZBRUSH GRID TEMPLATE */
     .zbrushGrid{
@@ -900,6 +904,9 @@ main .blog-news-container .blog-news-main{
 }
 @media screen and (max-width:1279px){
     
+    .userData a{
+    font-size:0.7em;
+}
 }
 
 @media screen and (max-width:1023px){
@@ -975,28 +982,44 @@ main .blog-news-container .blog-news-main{
     /* ZBRUSH GRID TEMPLATE */
     .zbrushGrid{
         grid-template-columns: 1fr;
-        /* grid-template-rows: 25% 50% 25%; */
+        grid-template-rows: 700px 1400px 700px;
         grid-template-areas:"zbrushLeft"
                             "zbrushUser"
                             "zbrushRight" ;
-    }
-    .zbrushImgContainer{
-        height:600px;
-        
-    }
+        height:100%;
+                        }
     .zbrushLeft img, 
     .zbrushRight img{
         margin:auto;
         height: auto;
     }
     .zbrushLeft img{
-        margin-top:-400px;
+        margin-top:-350px;
         margin-left: -510px;
     }
+    .zbrushRight img{
+        margin-top:-900px;
+        margin-left: -1200px;
+    }
+    .zbrushUser .userDescription,
+    .userWeb, .userVideo h2{
+        font-size: 2em;
+    }
+    .zbrushUser{
+        padding-bottom:10px;
+    }
+    .videoResponsive{
+        margin:20px;
+    }
+    
     /*END ZBRUSH GRID TEMPLATE */
     /* ABOUT ME */
     .grid-container-height{
         min-height:calc(100vh - 210px);
+    }
+    .userData h4,
+    .userData a{
+        font-size:1.2em;
     }
     /* ENDS ABOUT ME */
     .contact{
@@ -1011,4 +1034,7 @@ main .blog-news-container .blog-news-main{
     .footer img{
         width:50px;
     }
+}
+@media screen and (max-width:767px){
+    
 }
