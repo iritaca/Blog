@@ -915,7 +915,7 @@ main .blog-news-container .blog-news-main{
     }
     .logo-imageContainer{
         width: 50px;
-        margin-top:5px;
+        vertical-align: middle;
     }
     .about-link{
         font-size:1.2em;
@@ -924,5 +924,91 @@ main .blog-news-container .blog-news-main{
     .home-main{
         height:calc(100vh - 100px);
     }
+    .home-main p{
+        font-weight: lighter;
+    }
     /* END FRONTPAGE */
+
+    /* BLOG WELCOME*/
+    .returnBlog a{
+        font-size:1.2em;
+    }
+    .gridContainer-articles{
+        height:calc(450px * 3);
+        margin:0 20px;
+    }
+    .grid-size{
+        height:400px;
+        width:100%;
+        flex-direction:row;
+    }
+    .grid-size .grid-imageContainer{
+        width:100%;
+    }
+    .grid-size .grid-details{
+        width:100%;
+        height:auto;
+    }
+    .grid-size img{
+        object-fit:cover;
+    }
+    /*END BLOG WELCOME*/
+    /* STEP BY STEP GUIDE */
+    .grid-container h1{
+        padding:30px 0;
+    }
+    .step{
+        margin:15px;
+        text-align: center;
+    }
+    .step-description .step-title{
+        font-size:2em;
+    }
+    .step-description p{
+        font-size: 1.6em;
+    }
+    .bonus-list{
+        margin-bottom:auto;
+    }
+    /*END STEP BY STEP GUIDE */
+
+    /* ZBRUSH GRID TEMPLATE */
+    .zbrushGrid{
+        grid-template-columns: 1fr;
+        /* grid-template-rows: 25% 50% 25%; */
+        grid-template-areas:"zbrushLeft"
+                            "zbrushUser"
+                            "zbrushRight" ;
+    }
+    .zbrushImgContainer{
+        height:600px;
+        
+    }
+    .zbrushLeft img, 
+    .zbrushRight img{
+        margin:auto;
+        height: auto;
+    }
+    .zbrushLeft img{
+        margin-top:-400px;
+        margin-left: -510px;
+    }
+    /*END ZBRUSH GRID TEMPLATE */
+    /* ABOUT ME */
+    .grid-container-height{
+        min-height:calc(100vh - 210px);
+    }
+    /* ENDS ABOUT ME */
+    .contact{
+        height:50px;
+        font-size:1.15em;
+        padding:2px 0;
+    }
+    .rights{
+        height:50px;
+        padding:5px;
+    }
+    .footer img{
+        width:50px;
+    }
 }
