@@ -909,7 +909,7 @@ main .blog-news-container .blog-news-main{
 }
 }
 
-@media screen and (max-width:1023px){
+@media screen and (max-width:1024px){
     /* FRONTPAGE */
     header{
         height: 100px;
@@ -1036,10 +1036,23 @@ main .blog-news-container .blog-news-main{
     }
 }
 @media screen and (max-width:767px){
+    header .red{
+        width:100%;
+        justify-content:space-around;
+    }
+    .about-link,
+    .logo-container a{
+        margin-right:20px;
+    }
+    .logo-container .about-link a{
+        margin-left:20px;
+    }
     /* ARTICLES */
     main .blog-news-container .blog-news-main{
-        grid-template-rows: 150px 400px 1fr ;
-
+        grid-template-rows: 150px 420px 1fr ;
+    }
+    main .blog-news-container{
+        padding:10px
     }
     .gridContainer-articles{
         height:calc(550px * 3);
@@ -1047,6 +1060,13 @@ main .blog-news-container .blog-news-main{
     .grid-size{
         height: 490px;
         overflow: hidden;
+    }
+    .videoContainer{
+        align-self: baseline;
+        width:100%;
+    }
+    .video{
+        width:100%;
     }
     .grid-imageContainer{
         height:100%;
@@ -1067,4 +1087,150 @@ main .blog-news-container .blog-news-main{
         font-size: 1em ;
     }
     /* END ABOUT */
+}
+@media screen and (max-width:480px){
+    /* INTRO */
+    .about-link{
+        margin-right:10px;
+    }
+    .home-main{
+        grid-template-columns: 10px 3fr 10px;
+    }
+    .appear p{
+        font-size: 1.5em;
+    }
+    /* ENDS INTRO */
+    /* BLOG WELCOME */
+    main .blog-news-container{
+        padding:10px;
+    }
+    .blog-news-main .title{
+        margin:10px;
+        padding:0;
+        font-size: 2.8em;
+    }
+    main .blog-news-container .blog-news-main{
+        /* grid-template-rows:80px 300px 1fr; */
+        grid-template-rows: 350px 30px 1fr;
+        grid-template-areas: "video video video"
+                            ". title ."
+                            "description description description";
+    }
+    .blog-news-main .title{
+        font-size: 2.4em;
+    }
+    .videoContainer{
+        /* background-color:blue; */
+        align-self: baseline;
+        width:100%;
+    }
+    .video{
+        width:400px;
+    }
+    .blog-news-container .description{
+        font-size: 1.6em;
+    }
+    /* END BLOG WELCOME */
+
+    /* ARTICLES */
+    .gridContainer-articles{
+        height:calc(620px * 3);
+    }
+    .grid-size{
+        flex-direction: column;
+        width:440px;
+        height:570px;
+    }
+    .grid-size img{
+        object-fit: cover;
+    }
+    .grid-size .grid-details{
+        margin:5px;
+    }
+    .grid-size .grid-detailsTitle{
+        font-size: 1.6em;
+        margin-top:5px;
+    }
+    .grid-size .grid-detailsDescription{
+        width:95%;
+        font-size:1.4em;
+        margin:8px;
+        padding:0;
+    }
+    .grid-size .grid-linkPage{
+        font-size:1.2em;
+        padding:5px;
+        width:auto;
+    }
+    /* END ARTICLES */
+    /* FOOTER */
+    .footer p{
+        font-size:0.7em;
+    }
+    /* END FOOTER */
+    /* ABOUT */
+    .returnBlog{
+        text-align:center;
+    }
+    .returnBlog a{
+        margin:0;
+    }
+    .grid-container-height .grid-container h1{
+        padding:0;
+        padding-bottom:10px;
+        font-size:1.8em;
+    }
+    .about{
+        margin:20px auto 30px;
+    }
+    .userData{
+        padding: 0 20px;
+    }
+    .userData .userName{
+        font-size: 0.7em;
+    }
+    .userData .userCareer{
+        font-size: 0.6em;
+    }
+    .userData h4{
+        font-size: 0.8em;
+    }
+    .userData p{
+        font-size: 0.6em;
+    }
+    .userContact a{
+        font-size: 0.7em;
+    }
+    /* END ABOUT */
+    /* GRAINS */
+    .grid-container h1{
+        padding:10px;
+        font-size:1.68em;
+    }
+    /* END  GRAINS */
+    /* ZBRUSH */
+    .zbrushGrid{
+        grid-template-rows: 500px 1100px 930px;
+    }
+    .zbrushUser-arrange{
+        justify-content: space-evenly;
+    }
+    .zbrushUser .zbrushUser-Logo{
+        width:90%;
+    }
+    .zbrushUser .userDescription{
+        font-size:1.7em;
+    }
+    .userDescription h2{
+        margin:10px auto;
+    }
+    /* END  ZBRUSH */
+    /* STEP BY STEP GUIDE */
+    .step-description .step-title{
+        font-size: 1.6em;
+    }
+    .step-description{
+        padding:0 20px;
+    }
+    /*END STEP BY STEP GUIDE */
 }
