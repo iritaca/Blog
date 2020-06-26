@@ -414,16 +414,7 @@ main .blog-news-container .blog-news-main{
     margin:0;
     padding:40px 0;
 }
-    .sand-grid{
-        /* height:calc(100vh - 520px); */
-        /* display:grid; */
-        /* grid-template-columns: var(--threeColumns);
-        grid-template-rows: repeat(2,1fr);
-        grid-template-areas: "sand1 sand2 sand3"
-                            "sand4 sand5 sand6"; */
-        /* grid-gap:10px; */
-    
-    }
+
     .sand-grid-imageContainer{
         margin:0;
         width:100%;
@@ -890,9 +881,6 @@ main .blog-news-container .blog-news-main{
         }
 /* END ABOUT ME */
 /* ZBRUSH GRID TEMPLATE */
-    .zbrushGrid{
-        /* height:calc(720px - 350px); */
-    }
     .zbrushLeft img{
         margin-left: -800px;
     }
