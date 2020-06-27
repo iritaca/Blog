@@ -118,7 +118,7 @@ header nav a{
 }
 
 .home-main{
-    background-image:url('../images/NewSand/50mil_Front_Frame001.png');
+    background-image:url('../images/DraggyBlog/Sand/FrontPage.png');
     background-color: #222;
     background-repeat: no-repeat;
     background-size: cover;
@@ -280,11 +280,29 @@ main .blog-news-container .blog-news-main{
     width:100%;
     object-fit: cover;
 }
+.step-videoContainer{
+    /* background-color:blue; */
+    position:relative;
+    height: 0;
+    padding:0;
+    padding-top:56.25%;
+}
+.videoRoots{
+    position:absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
 .step-description{
     padding:0 30px;
 }
+
 .step-description .step-title{
     font-size: 3em;
+    text-align: center;
 }
 .step-description p{
     font-size: 2.5em;
@@ -1043,10 +1061,11 @@ main .blog-news-container .blog-news-main{
         padding:10px
     }
     .gridContainer-articles{
-        height:calc(550px * 3);
+        height:calc(800px * 3);
     }
     .grid-size{
-        height: 490px;
+        flex-direction: column;
+        height: 750px;
         overflow: hidden;
     }
     .videoContainer{

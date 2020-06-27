@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/icons.css">
     <link rel="stylesheet" href="css/animation.css">
-    <link rel="icon" href="images/logo.png">
+    <link rel="icon" href="images/DraggyBlog/logo.png">
     <script>
         document.oncontextmenu = function(){
             return false;
@@ -27,7 +27,7 @@
         <section class="logo-container">
             <figure class="logo-imageContainer">
                 <a href="index.html">
-                    <img src="images/logo.png" alt="Logo iritaca">
+                    <img src="images/DraggyBlog/logo.png" alt="Logo iritaca">
                 </a>
             </figure>
             <div class="returnBlog">
@@ -44,7 +44,7 @@
                 <div class="steps-list">
                     <div class="step stepOne">
                         <figure class="step-imageContainer">
-                            <img src="images/Instructions/Houdini_step1.png" alt="Placing the object inside Houdini's software.">
+                            <img src="images/DraggyBlog/Instructions/Houdini_step1.png" alt="Placing the object inside Houdini's software.">
                         </figure>
                         <section class="step-description">
                             <h3 class="step-title">Step 1: Add your model inside Houdini</h3>
@@ -53,7 +53,7 @@
                     </div>
                     <div class="step stepTwo">
                         <figure class="step-imageContainer">
-                            <img src="images/Instructions/Houdini_step2_Option01.png" alt="Deleting some points using the delete node.">
+                            <img src="images/DraggyBlog/Instructions/Houdini_step2_Option01.png" alt="Deleting some points using the delete node.">
                         </figure>
                         <section class="step-description">
                             <h3 class="step-title">Step 2: Delete points with delete by range</h3>
@@ -63,7 +63,7 @@
                     </div>
                     <div class="step stepTwo_wrangle">
                         <figure class="step-imageContainer">
-                            <img src="images/Instructions/Houdini_step2_OptionWrangle.png" alt="Deleting some points using an attribute wrangle.">
+                            <img src="images/DraggyBlog/Instructions/Houdini_step2_OptionWrangle.png" alt="Deleting some points using an attribute wrangle.">
                         </figure>
                         <section class="step-description">
                             <h3 class="step-title">Step 2: Deleting points using an Attribute Wrangle</h3>
@@ -73,7 +73,7 @@
                     </div>
                     <div class="step stepThree-start">
                         <figure class="step-imageContainer">
-                            <img src="images/Instructions/Houdini_step3_StartPoints.png" alt="Choosing the starting points group.">
+                            <img src="images/DraggyBlog/Instructions/Houdini_step3_StartPoints.png" alt="Choosing the starting points group.">
                         </figure>
                         <section class="step-description">
                             <h3 class="step-title">Step 3: Starting Points</h3>
@@ -82,17 +82,17 @@
                     </div>
                     <div class="step stepThree-end">
                         <figure class="step-imageContainer">
-                            <img src="images/Instructions/Houdini_step3_EndPoints.png" alt="Select the end points group">
+                            <img src="images/DraggyBlog/Instructions/Houdini_step3_EndPoints.png" alt="Select the end points group">
                         </figure>
                         <section class="step-description">
                             <h3 class="step-title">Step 4: End Points</h3>
                             <p>&#42;Remember always to start with a small amount of points, these are going to be limited by your pc power.</p>
-                            <p>We will use another group of points called "endPoints",(You can name both groups however you want, the important here is to have the names, because we are going ot use them in the next step).For this part I used "group by range" node, in the Group type change the option into points, and then select a range, to get some points.</p>
+                            <p>We will use another group of points called "endPoints",(You can name both groups however you want, the important here is to have the names, because we are going to use them in the next step).For this part I used "group by range" node, in the Group type change the option into points, and then select a range, to get some points.</p>
                         </section>
                     </div>
                     <div class="step stepFive">
                         <figure class="step-imageContainer">
-                            <img src="images/Instructions/Houdini_step4_shortPath.png" alt="The shortest path node">
+                            <img src="images/DraggyBlog/Instructions/Houdini_step4_shortPath.png" alt="The shortest path node">
                         </figure>
                         <section class="step-description">
                             <h3 class="step-title">Step 5: Find Shortest Path</h3>
@@ -101,19 +101,19 @@
                     </div>
                     <div class="step stepSix">
                         <figure class="step-imageContainer">
-                            <img src="images/Instructions/Houdini_step5_Carve.png" alt="Curves animation with Carve node.">
+                            <img src="images/DraggyBlog/Instructions/Houdini_step5_Carve.png" alt="Curves animation with Carve node.">
                         </figure>
                         <section class="step-description">
                             <h3 class="step-title">Step 6: Carve Node</h3>
-                            <p>This is the main key for the animation, the "carve node" slices, or extract points from a primitive. By setting the "First U" option as close to 0, or even turn it off. For this example you just need to use the "Second U" option. I made some tests with two methods for the roots animation, one was manual, here you set a range of keyframes, and add them a value from 0 to 1... But we're going to use another option, you only need the number of seconds for your animation to be completed, for this example I used 4 seconds, so instead of adding some keyframes we use the expression @Time/4. </p>
+                            <p>This is the main key for the animation, the "carve node" slices, or extract points from a primitive. By setting the "First U" option as close to 0, or even turn it off. For this example you just need to use the "Second U" option. I made some tests with two methods for the roots animation, one was manual, here you can set a range of keyframes, and add them a value from 0 to 1... But we're going to use another option, you only need the number of seconds for your animation to be completed, for this example I used 4 seconds, so instead of adding some keyframes we use the expression @Time/4. </p>
                         </section>
                     </div>
                     <div class="step stepSeven">
-                        <figure class="step-imageContainer">
-                            <img src="images/Instructions/Houdini_step5_Carve.png" alt="Animation of our curves">
+                        <figure class="step-imageContainer step-videoContainer">
+                            <iframe class="videoRoots" src="https://player.vimeo.com/video/433010506" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
                         </figure>
                         <section class="step-description">
-                            <h3 class="step-title">Animation</h3>
+                            <h3 class="step-title">Houdini | Root Animation</h3>
                             <p>Congratulations!</p>
                             <p> There's some bonus steps to personalize more your root animation. You'll find them below.</p>
                         </section>
@@ -123,11 +123,11 @@
                 <div class="bonus-list">
                     <div class="step stepBonusOne">
                         <figure class="step-imageContainer">
-                            <img src="images/Instructions/Houdini_step6_width.png" alt="Creating the attribute curve u and the vex code for width.">
+                            <img src="images/DraggyBlog/Instructions/Houdini_step6_width.png" alt="Creating the attribute curve u and the vex code for width.">
                         </figure>
                         <section class="step-description">
                             <h3 class="step-title">The "curve u" attribute</h3>
-                            <p>At this point you can add a "resample node" to get the "@curveu" attribute, which need to be create by activating the "Curve U Attribute" checkbox. With this you will get some point value according to the point spacing of the input. Which we will use to add more results like width and color.</p>
+                            <p>At this point you can add a "resample node" to get the "@curveu" attribute, which need to be created by activating the "Curve U Attribute" checkbox. With this you will get some point value according to the point spacing of the input. Which we will use to add more results like width and color.</p>
                             <p>First we will create a ramp value to control how wide our curve should be. Add an Attribute wrangle to start coding your own @width control. Our VEXpression will go like this:</p>
                             <p>@width=fit(chramp("ramp_width",@curveu),0,1,ch("min_width"), ch("max_width"))</p>
                             <p>Remember to click on "Creates spare parameters for each unique call of ch()", to generate the changes inside our parameter tab.</p>
@@ -135,20 +135,20 @@
                     </div>
                     <div class="step stepBonusTwo">
                         <figure class="step-imageContainer">
-                            <img src="images/Instructions/Houdini_step7_Color.png" alt="Create an attribute VOP to add some colors.">
+                            <img src="images/DraggyBlog/Instructions/Houdini_step7_Color.png" alt="Create an attribute VOP to add some colors.">
                         </figure>
                         <section class="step-description">
                             <h3 class="step-title">Creating a Ramp, with attribute VOP</h3>
                             <p>As I told you before, there are many ways to achieve your results inside Houdini, so we are going to use the same "@curveu" to create a customizable ramp to add some colors.</p>
-                            <p>Start by creating a bind node to bring your attribute inside, and inicializate it by adding the name curveu and the type must be float.</p>
-                            <p>Add a multiply node, sometimes I like to create a multiplier to get more value with the incoming results, create a parameter, should be a float too, and it can have any name, I named it Color Mult, it'll be easier for others to play with your parameters if your clear with the names.</p>
+                            <p>Start by creating an attribute VOP and inside call a bind node to bring your attribute inside, inicializate it by adding the name curveu and the type must be float.</p>
+                            <p>Add a multiply node, sometimes I like to create a multiplier to get more value with the incoming results, create a parameter, should be a float too, and it can have any name, I named it Color Mult, it'll be easier for others to play with your parameters if you are clear with the names.</p>
                             <p>Add a ramp parameter and link the multiply, again add a good name so you could remember what it does. </p>
                             <p>And finally connect it to your Cd output.</p>
                         </section>
                     </div>
                     <div class="step stepBonusThree">
                         <figure class="step-imageContainer">
-                            <img src="images/Instructions/Houdini_step9_PolyWire.png" alt="Add a polywire node.">
+                            <img src="images/DraggyBlog/Instructions/Houdini_step9_PolyWire.png" alt="Add a polywire node.">
                         </figure>
                         <section class="step-description">
                             <h3 class="step-title">And for the final touch.</h3>
@@ -157,17 +157,17 @@
                         </section>
                     </div>
                     <div class="step BonusOne">
-                        <figure class="step-imageContainer">
-                            <img src="images/Instructions/Houdini_step1.png" alt="Curves animation.">
+                        <figure class="step-imageContainer step-videoContainer">
+                            <iframe class="videoRoots" src="https://player.vimeo.com/video/433011085" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
                         </figure>
                         <section class="step-description">
-                            <h3 class="step-title">Animation</h3>
+                            <h3 class="step-title">Roots with width</h3>
                             <p></p>
                         </section>
                     </div>
                     <div class="step BonusTwo">
-                        <figure class="step-imageContainer">
-                            <img src="images/Instructions/Houdini_step1.png" alt="Growing roots over a sand statue.">
+                        <figure class="step-imageContainer step-videoContainer">
+                            <iframe class="videoRoots" src="https://player.vimeo.com/video/433011341" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
                         </figure>
                         <section class="step-description">
                             <h3 class="step-title">Growing roots over a sand statue</h3>
@@ -186,7 +186,7 @@
         </div>
         <div class="rights">
             <p>Website developed by <a href="">Iritaca</a>, Isaac Rios 2020</p>
-            <img src="images/logo.png" alt="Iritaca logo">
+            <img src="images/DraggyBlog/logo.png" alt="Iritaca logo">
         </div>
     </footer>
 </body>
