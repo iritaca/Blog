@@ -1127,7 +1127,6 @@ main .blog-news-container .blog-news-main{
         font-size: 2.4em;
     }
     .videoContainer{
-        /* background-color:blue; */
         align-self: baseline;
         width:100%;
     }
@@ -1240,4 +1239,87 @@ main .blog-news-container .blog-news-main{
         padding:0 20px;
     }
     /*END STEP BY STEP GUIDE */
+}
+@media screen and (max-width:320px){
+    /* FRONTPAGE */
+    .logo-container .about-link a{
+        margin-left:0px;
+        margin-right:0px;
+    }
+    .logo-container{
+        grid-template-columns: repeat(3,33%);
+    }
+    .about-link{
+        margin-right:10px;
+    }
+    .logo-container a{
+        margin-left:15px;
+    }
+    .returnBlog a{
+        margin-left:0;
+    }
+    .logo-container a{
+        font-size: 0.7em;
+    }
+    /* END FRONTPAGE */
+    /* WELCOME */
+    main .blog-news-container{
+        width:100%;
+        padding:2px;
+    }
+    main .blog-news-container .blog-news-main{
+        grid-template-columns: 1fr;
+        grid-template-rows:  40px 180px 1fr;
+        grid-template-areas: 
+                            "title"
+                            "video"
+                            "description";
+    }
+    .videoContainer{
+        width:95%;
+    }
+    .video{
+        width:200px;
+        top:-90px;
+    }
+    .contact{
+        height: 80px;
+        padding:2px;
+
+    }
+    /* ARTICLES */
+    .gridContainer-articles{
+        height:calc(580px * 3);
+        margin:0 10px;
+        grid-gap:1px;
+    }
+    .grid-size{
+        width:300px;
+        height:550px;
+    }
+    .grid-imageContainer{
+        height:200px;
+    }
+    .grid-size .grid-details{
+        height:350px;
+        justify-content:space-evenly;
+    }
+    /* END ARTICLES */
+    /* END  WELCOME */
+    /* ZBRUSH */
+    .zbrushGrid{
+        grid-template-rows: 500px 1000px 500px;
+    }
+    .zbrushLeft img{
+        margin-left: -1190px;
+    }
+    .zbrushRightt img{
+        margin-left: -1300px;
+    }
+    .zbrushUser .userDescription,
+    .userWeb,
+    .userVideo h2{
+        font-size:1.4em;
+    }
+    /* ENDS ZBRUSH */
 }
