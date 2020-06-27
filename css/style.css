@@ -350,7 +350,7 @@ main .blog-news-container .blog-news-main{
     grid-template-areas: "root grains trejo";
     grid-gap:2%;
     height:1100px;
-    margin:60px 0;
+    margin:60px 10px;
 }
 
 .grid-size{
@@ -743,13 +743,14 @@ main .blog-news-container .blog-news-main{
         height:800px;
         margin:60px 20px;
     }
-     
+     .grid-size{
+         height:100%;
+     }
     .grid-size img{
         height:400px;
-        
     }
     .grid-details{
-        height:calc(400px - 30px);
+        height:calc(100% - 400px);
 
     }
     .grid-size .grid-detailsTitle{
@@ -822,7 +823,7 @@ main .blog-news-container .blog-news-main{
     
     /* BLOG WELCOME */
     main .blog-news-container .blog-news-main{
-        grid-template-rows:100px 1fr 1fr;
+        grid-template-rows: 15% 35% 50%;
         grid-template-areas:". title ."
                             "video video video"
                             "description description description";
@@ -831,16 +832,32 @@ main .blog-news-container .blog-news-main{
     /* ARTICLES */
         .gridContainer-articles{
             grid-template-columns: 1fr;
+            grid-template-rows: repeat(3,32%);
             grid-template-areas: "root"
                                 "grains"
                                 "trejo";
-            height: 2250px;
+            height: 100%;
+            grid-gap:2%;
         }
         .grid-size{
-            height:680px;
+            overflow: hidden;
+            flex-direction: row;
+            width:100%;
+        }
+        .grid-imageContainer{
+            width:100%;
         }
         .grid-details{
+            width:100%;
+        }
+        .grid-size img{
+            object-fit:cover;
+        } 
+        .grid-details{
             height: calc(300px - 40px);
+        }
+        .title{
+            align-self: flex-start;
         }
     /* ENDS ARTICLES */
 
@@ -913,6 +930,14 @@ main .blog-news-container .blog-news-main{
     .userData a{
     font-size:0.7em;
 }
+/* ARTICLES */
+    .grid-size .grid-details{
+        height:90%;
+    }
+    .grid-size .grid-detailsDescription {
+        margin:20px 0;
+    }
+/* END  ARTICLES */
 }
 
 @media screen and (max-width:1024px){
@@ -947,8 +972,8 @@ main .blog-news-container .blog-news-main{
         font-size:1.2em;
     }
     .gridContainer-articles{
-        height:calc(480px * 3);
-        margin:0 20px;
+        height:100%;
+        margin:30px 20px;
     }
     .grid-size{
         height:450px;
@@ -1058,9 +1083,15 @@ main .blog-news-container .blog-news-main{
     .contact{
         height: 80px;
     }
+    .contact p{
+        padding:10px;
+    }
+    .returnBlog a{
+        margin-right:0;
+    }
     /* ARTICLES */
     main .blog-news-container .blog-news-main{
-        grid-template-rows: 150px 420px 1fr ;
+        grid-template-rows: 10% 25% 65% ;
     }
     main .blog-news-container{
         padding:10px
@@ -1086,7 +1117,12 @@ main .blog-news-container .blog-news-main{
     .grid-size img{
         height: 100%;
         object-fit: none;
-        
+    }
+    .grid-size .grid-detailsDescription{
+        padding:1px;
+    }
+    .grid-size .grid-details{
+        width:95%;
     }
     /* END ARTICLES */
     /* ZBRUSH */
@@ -1102,8 +1138,18 @@ main .blog-news-container .blog-news-main{
 }
 @media screen and (max-width:480px){
     /* INTRO */
+    .home-main .appear{
+        margin-top:60px;
+    }
     .about-link{
-        margin-right:10px;
+        margin-right:0;
+    }
+    .logo-container a, .about-link a{
+        margin-left:5px;
+        margin-right: 5px;
+    }
+    .logo-container .about-link a{
+        margin-left:5px;
     }
     .home-main{
         grid-template-columns: 10px 3fr 10px;
@@ -1111,6 +1157,7 @@ main .blog-news-container .blog-news-main{
     .appear p{
         font-size: 1.5em;
     }
+
     /* ENDS INTRO */
     /* BLOG WELCOME */
     main .blog-news-container{
@@ -1122,10 +1169,9 @@ main .blog-news-container .blog-news-main{
         font-size: 2.8em;
     }
     main .blog-news-container .blog-news-main{
-        /* grid-template-rows:80px 300px 1fr; */
-        grid-template-rows: 350px 30px 1fr;
-        grid-template-areas: "video video video"
-                            ". title ."
+        grid-template-rows:  5% 30% 65%;
+        grid-template-areas:". title ." 
+                            "video video video"
                             "description description description";
     }
     .blog-news-main .title{
@@ -1135,8 +1181,11 @@ main .blog-news-container .blog-news-main{
         align-self: baseline;
         width:100%;
     }
+    .videoContainer-responsive{
+        width:98%;
+    }
     .video{
-        width:400px;
+        top:-50px;
     }
     .blog-news-container .description{
         font-size: 1.6em;
@@ -1145,11 +1194,11 @@ main .blog-news-container .blog-news-main{
 
     /* ARTICLES */
     .gridContainer-articles{
-        height:calc(620px * 3);
+        height:100%;
+        margin:40px 10px;
     }
     .grid-size{
         flex-direction: column;
-        width:440px;
         height:570px;
     }
     .grid-size img{
@@ -1175,8 +1224,12 @@ main .blog-news-container .blog-news-main{
     }
     /* END ARTICLES */
     /* FOOTER */
+    .contact{
+        height:100px;
+    }
     .footer p{
-        font-size:0.7em;
+        font-size:0.8em;
+        padding:0 2px;
     }
     /* END FOOTER */
     /* ABOUT */
@@ -1221,10 +1274,16 @@ main .blog-news-container .blog-news-main{
     /* END  GRAINS */
     /* ZBRUSH */
     .zbrushGrid{
-        grid-template-rows: 500px 1100px 930px;
+        display: block;
     }
     .zbrushUser-arrange{
+        margin-top:-10px;
         justify-content: space-evenly;
+        height:900px;
+        background-color: var(--darkColor);
+    }
+    .zbrushLeft img{
+        margin-left:-1100px;
     }
     .zbrushUser .zbrushUser-Logo{
         width:90%;
@@ -1232,9 +1291,13 @@ main .blog-news-container .blog-news-main{
     .zbrushUser .userDescription{
         font-size:1.7em;
     }
+    .zbrushImgContainer{
+        height: 400px;
+    }
     .userDescription h2{
         margin:10px auto;
     }
+    
     /* END  ZBRUSH */
     /* STEP BY STEP GUIDE */
     .step-description .step-title{
@@ -1292,20 +1355,23 @@ main .blog-news-container .blog-news-main{
     }
     /* ARTICLES */
     .gridContainer-articles{
-        height:calc(580px * 3);
-        margin:0 10px;
+        margin:0px 10px;
         grid-gap:1px;
     }
     .grid-size{
         width:300px;
         height:550px;
+        margin-bottom:30px;
     }
     .grid-imageContainer{
-        height:200px;
+        height:100%;
     }
     .grid-size .grid-details{
-        height:350px;
+        height:100%;
         justify-content:space-evenly;
+    }
+    .grid-size .grid-detailsDescription{
+        font-size:1em;
     }
     /* END ARTICLES */
     /* END  WELCOME */
