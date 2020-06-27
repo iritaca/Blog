@@ -947,22 +947,24 @@ main .blog-news-container .blog-news-main{
         font-size:1.2em;
     }
     .gridContainer-articles{
-        height:calc(450px * 3);
+        height:calc(480px * 3);
         margin:0 20px;
     }
     .grid-size{
-        height:400px;
+        height:450px;
         width:100%;
         flex-direction:row;
     }
     .grid-size .grid-imageContainer{
         width:100%;
+        height:100%;
     }
     .grid-size .grid-details{
         width:100%;
         height:auto;
     }
     .grid-size img{
+        height:100%;
         object-fit:cover;
     }
     /*END BLOG WELCOME*/
@@ -1052,6 +1054,9 @@ main .blog-news-container .blog-news-main{
     }
     .logo-container .about-link a{
         margin-left:20px;
+    }
+    .contact{
+        height: 80px;
     }
     /* ARTICLES */
     main .blog-news-container .blog-news-main{
@@ -1283,9 +1288,7 @@ main .blog-news-container .blog-news-main{
         top:-90px;
     }
     .contact{
-        height: 80px;
         padding:2px;
-
     }
     /* ARTICLES */
     .gridContainer-articles{
